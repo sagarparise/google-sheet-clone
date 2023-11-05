@@ -1,0 +1,18 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+   
+}
+.options
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.hidden-input {
+    width: 0 !important; 
+    height: 0;
+    border: none ;
+}

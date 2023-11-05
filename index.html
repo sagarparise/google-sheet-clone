@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sheet Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="top-part.css">
+    <link rel="shortcut icon" href="assets/sheet-icon.png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <section class="top-container">
+        <form id="form" class="options">
+            <select name="font-family" id="font-family">
+                <option value="'Courier New', Courier, monospace">Courier New</option>
+                <option value="'Times New Roman', Times, serif">
+                  Times New Roman
+                </option>
+                <option value="Arial, Helvetica, sans-serif">Arial Helvatica</option>           
+            </select>
+            <input type="number" id="font-size" min="8" max="30" value="16" placeholder="Font size">
+           
+            <div>
+                <label class='bx bx-bold' for="bold"></label>
+                <input type="checkbox" id="bold" name="bold" class="hidden-input">
+            </div>
+
+           <div>
+            <label class='bx bx-italic' for="itallic" ></label>
+            <input type="checkbox" id="itallic" name="itallic" class="hidden-input">
+           </div>
+
+            <div>
+                <label class='bx bx-underline' for="underline" ></label>
+                <input type="checkbox" name="underline" id="underline" class="hidden-input">
+            </div>
+
+            <div>
+                <label class='bx bx-align-left' for="left-align"></label>
+                <input type="radio" name="text-align" id="left-align" value="left" class="hidden-input">
+
+                <label class='bx bx-align-middle' for="middle-align"></label>
+                <input type="radio" name="text-align" id="middle-align" value="center" class="hidden-input">
+
+                <label class='bx bx-align-right' for="right-align"></label>
+                <input type="radio" name="text-align" id="right-align" value="right" class="hidden-input">
+            </div>
+
+        </form>
+    </section>
+   <section class="root-container">
+        <div class="header"></div>
+        <div class="hero-body">
+            <div class="sno"></div>
+            <div class="main"></div>
+        </div>
+
+   </section>
+    <script src="index.js"></script>
+</body>
+</html>
