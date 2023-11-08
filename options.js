@@ -21,6 +21,7 @@ function onCellFocus(event){
    activeElement = event.target;
    if(state[currentCellId])
    {
+
    resetOptions(state[currentCellId]);
    
    }
@@ -59,7 +60,7 @@ function onFormChange()
         itallic:form.itallic.checked,
         underline:form.underline.checked
     }
-    console.log(currentState);
+   
     applyStylesToCell(currentState);
 
 }

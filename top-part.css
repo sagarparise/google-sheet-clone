@@ -7,7 +7,8 @@
 .top-container
 {
     height: 25vh;
-     padding: 10px;
+    padding: 10px;
+     background-color: #efefefff;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -20,6 +21,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
+    align-items: center;
    
 }
 .top-right
@@ -39,13 +41,28 @@
 {
     display: flex;
     align-items: center;
+    justify-content: start;
     gap: 20px;
 }
 .top-tools > ul
 {
     list-style-type: none;
     display: flex;
-    gap: 20px;
+    align-items: center;
+    gap: 5px;
+}
+.top-tools > ul > li
+{
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.top-tools > ul > li:hover
+{
+    background-color: #dadadaff;
+    border-radius: 5px;
+    cursor: pointer;
+
 }
 .top-left
 {
@@ -61,11 +78,19 @@
    
     padding: 10px;
     font-size: 20px;
-    background-color: #efefefff;
+    background-color: #dadadaff;
     border-radius: 50%;
+}
+.top-left > i:hover
+{
+    background-color: rgb(207, 205, 205);
+    color: white;
+    cursor: pointer;
 }
 .options
 {
+    padding: 10px;
+    border-radius: 5px;
     display: flex;
     align-items: center; 
     gap: 15px;
@@ -83,33 +108,11 @@
    
    
 }
-.bottom-section
-{
-    padding-inline: 20px;
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.bottom-section > #active-cell
-{
-    padding: 10px;
-    background-color:#ececf4ff;
-    border-radius: 5px;
-}
-.bottom-section > input
-{
-    flex: 1;
-    padding: 10px;
-    border:1px solid #dadadaff;
-    border-radius: 5px;
-   
 
-}
 .options > div > label
 {
     padding: 5px;
-    border:1px solid #f6f6f6ff;
+    border:1px solid #dededeff;
     border-radius: 5px;
     font-size: 20px;
     font-weight: 500;
@@ -121,6 +124,27 @@
 }
 .hidden-input:checked + label
 {
-    background-color:#efefefff;
+    background-color: #c5c5c5ff;
     
+}
+.bottom-section
+{
+    padding-inline: 20px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.bottom-section > #active-cell
+{
+    padding: 8px;
+    background-color:#ffffff;
+    border-radius: 5px;
+}
+.bottom-section > input
+{
+    flex: 1;
+    padding: 10px;
+    border:1px solid #dadadaff;
+    border-radius: 5px;
 }
