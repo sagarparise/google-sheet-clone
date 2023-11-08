@@ -60,10 +60,6 @@
     border: 1px solid #e6e6e6;
 }
 
-.main 
-{
-   
-}
 .main-row
 {
     display: flex;
@@ -74,4 +70,5 @@
     min-width: 120px;
     padding: 5px;
     border: 1px solid #e6e6e6;
+  
 }

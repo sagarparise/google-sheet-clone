@@ -11,43 +11,58 @@
 </head>
 <body>
     <section class="top-container">
-        <form id="form" class="options">
-            <select name="font-family" id="font-family">
+        <form id="form" class="options" onchange="onFormChange()">
+
+            <select name="fontFamily" id="fontFamily">
                 <option value="'Courier New', Courier, monospace">Courier New</option>
                 <option value="'Times New Roman', Times, serif">
                   Times New Roman
                 </option>
                 <option value="Arial, Helvetica, sans-serif">Arial Helvatica</option>           
             </select>
-            <input type="number" id="font-size" min="8" max="30" value="16" placeholder="Font size">
+            
+            <input type="number" name="fontSize" id="fontSize" min="8" max="30" value="16" placeholder="Font size">
            
             <div>
-                <label class='bx bx-bold' for="bold"></label>
                 <input type="checkbox" id="bold" name="bold" class="hidden-input">
+                <label class='bx bx-bold' for="bold"></label>
             </div>
 
            <div>
-            <label class='bx bx-italic' for="itallic" ></label>
-            <input type="checkbox" id="itallic" name="itallic" class="hidden-input">
+                <input type="checkbox" id="itallic" name="itallic" class="hidden-input">
+                <label class='bx bx-italic' for="itallic" ></label>
            </div>
 
-            <div>
-                <label class='bx bx-underline' for="underline" ></label>
+            <div>           
                 <input type="checkbox" name="underline" id="underline" class="hidden-input">
+                <label class='bx bx-underline' for="underline" ></label>
             </div>
 
             <div>
+                <input type="radio" name="textAlign" id="left-align" value="left" class="hidden-input" checked>
                 <label class='bx bx-align-left' for="left-align"></label>
-                <input type="radio" name="text-align" id="left-align" value="left" class="hidden-input">
 
+                <input type="radio" name="textAlign" id="middle-align" value="center" class="hidden-input">
                 <label class='bx bx-align-middle' for="middle-align"></label>
-                <input type="radio" name="text-align" id="middle-align" value="center" class="hidden-input">
-
+               
+                <input type="radio" name="textAlign" id="right-align" value="right" class="hidden-input">
                 <label class='bx bx-align-right' for="right-align"></label>
-                <input type="radio" name="text-align" id="right-align" value="right" class="hidden-input">
+               
+            </div>
+            <div>
+                <input type="color" name="textcolor" value="black" id="color" class="hidden-input">
+                <label class='bx bx-font-color' for="color" ></label>
+            </div>
+            <div>
+                <input type="color" name="colorfill" value="#ffffff" id="backgroundColor" class="hidden-input">
+                <label class='bx bx-color-fill' for="backgroundColor" ></label>
             </div>
 
         </form>
+        <div class="bottom-section">
+            <div id="active-cell">null</div>
+            <input type="text" class="expression" placeholder="f( x )">
+        </div>
     </section>
    <section class="root-container">
         <div class="header"></div>
@@ -57,6 +72,7 @@
         </div>
 
    </section>
+   <script src="options.js"></script>
     <script src="index.js"></script>
 </body>
 </html>

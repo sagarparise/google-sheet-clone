@@ -4,15 +4,68 @@
     box-sizing: border-box;
    
 }
+.top-container
+{
+    height: 20vh;
+    padding: 30px;
+}
 .options
 {
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
+}
+#fontSize ,#font-family
+{
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #e0dddbff;
 }
 .hidden-input {
     width: 0 !important; 
     height: 0;
     border: none ;
+   
+   
+}
+.bottom-section
+{
+    padding-inline: 20px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.bottom-section > #active-cell
+{
+    padding: 10px;
+    background-color:#ececf4ff;
+    border-radius: 5px;
+}
+.bottom-section > input
+{
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+.options > div > label
+{
+    padding: 5px;
+    border:1px solid #f6f6f6ff;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.options > div > label:hover
+{
+    background-color: #efefefff;
+}
+.hidden-input:checked + label
+{
+    background-color:#efefefff;
+    
 }

@@ -28,7 +28,7 @@ function createSeriesNumberCells()
         sno.appendChild(snoCell);
     }
 }
- function createMainRow(){
+ function createMainRow(rowNumber){
   
   
     let row = document.createElement("div");
@@ -38,7 +38,9 @@ function createSeriesNumberCells()
         let mainCell = document.createElement("div");
         mainCell.className = "main-cell";
         mainCell.contentEditable = true;
-        row.appendChild(mainCell);
+      mainCell.id = String.fromCharCode(64 + j) + rowNumber ;
+      row.appendChild(mainCell);
+      mainCell.addEventListener("focus", onCellFocus);
       }
     main.appendChild(row);
   
@@ -47,7 +49,7 @@ function createSeriesNumberCells()
   {
     for(let i=1; i<=rowsNo; i++)
     {
-      createMainRow();
+      createMainRow(i);
     }
   }
 createHeaderCells();
