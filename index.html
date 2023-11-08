@@ -6,16 +6,44 @@
     <title>Google Sheet Clone</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="top-part.css">
-    <link rel="shortcut icon" href="assets/sheet-icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/sheets (1).png" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <section class="top-container">
+        <div class="top-head">
+           <div class="top-right">
+                <img src="assets/sheets (1).png" width="40px" alt="icon">
+                <div class="top-tools">
+                    <div>
+                        <h2>
+                            Untitled Spreadsheet
+                        </h2>
+                        <img src="assets/star (1).png" width="20px" alt="">
+                    </div>
+                    <ul>
+                        <li>File</li>
+                        <li>Edit</li>
+                        <li>View</li>
+                        <li>Insert</li>
+                        <li>Format</li>
+                        <li>Data</li>
+                        <li>Tools</li>
+                        <li>Extensions</li>
+                    </ul>
+                </div>
+           </div>
+           <div class="top-left">
+            <i class='bx bx-comment-detail'></i>
+            <i class='bx bx-video'></i>
+            <i class='bx bx-user-plus'></i>
+           </div>
+        </div>
         <form id="form" class="options" onchange="onFormChange()">
 
             <select name="fontFamily" id="fontFamily">
                 <option value="'Courier New', Courier, monospace">Courier New</option>
-                <option value="'Times New Roman', Times, serif">
+                <option value="'Times New Roman', Times, serif" selected>
                   Times New Roman
                 </option>
                 <option value="Arial, Helvetica, sans-serif">Arial Helvatica</option>           

@@ -6,7 +6,7 @@ const state = {};
 const defaultProperties = {
     fontFamily:'sans',
     fontSize: 16,
-    color: "#507bda",
+    color: "#000000",
    backgroundColor:"#ffffff",
     textAlign:"left",
     bold:false,
