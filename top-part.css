@@ -109,7 +109,7 @@
    
 }
 
-.options > div > label
+.options > div > label, .options > button
 {
     padding: 5px;
     border:1px solid #dededeff;
@@ -118,15 +118,16 @@
     font-weight: 500;
     cursor: pointer;
 }
-.options > div > label:hover
+.options > div > label:hover,.options > button:hover
 {
-    background-color: #efefefff;
+    background-color: rgb(216, 215, 215);
 }
 .hidden-input:checked + label
 {
     background-color: #c5c5c5ff;
     
 }
+
 .bottom-section
 {
     padding-inline: 20px;

@@ -12,6 +12,7 @@ const defaultProperties = {
     bold:false,
     itallic:false,
     underline:false
+    // value:''
 
 }
 
@@ -75,6 +76,7 @@ function onFormChange()
     activeElement.style.fontWeight = currentState.bold ? "bold": "normal";
     activeElement.style.fontStyle = currentState.itallic ? "italic" : "normal";
     activeElement.style.textDecoration = currentState.underline ? "underline" : "none";
-    state[activeElement.id] = currentState;
+    state[activeElement.id] = {...currentState , value:activeElement.innerText};
+   // console.log(state);
     
  }

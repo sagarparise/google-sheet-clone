@@ -41,6 +41,7 @@ function createSeriesNumberCells()
       mainCell.id = String.fromCharCode(64 + j) + rowNumber ;
       row.appendChild(mainCell);
       mainCell.addEventListener("focus", onCellFocus);
+      mainCell.addEventListener("input",  onFormChange);
       }
     main.appendChild(row);
   
