@@ -4,6 +4,8 @@ const header = document.querySelector(".header");
 const sno = document.querySelector(".sno");
 const main = document.querySelector(".main");
 
+let zoomLevel = 1;
+
 function createHeaderCells()
 {
   //header cells here
@@ -18,6 +20,8 @@ function createHeaderCells()
     header.appendChild(headerCell);
   }
 }
+
+
 function createSeriesNumberCells()
 {
     for(let i=1; i<=rowsNo; i++)
@@ -28,6 +32,8 @@ function createSeriesNumberCells()
         sno.appendChild(snoCell);
     }
 }
+
+
  function createMainRow(rowNumber){
   
   
@@ -53,6 +59,44 @@ function createSeriesNumberCells()
       createMainRow(i);
     }
   }
+
+  //zoom in 
+  function zoomIn(){
+    zoomLevel+= 0.1;
+    applyZoom(zoomLevel);
+    
+  }
+
+  function zoomOut(){
+  let zm = zoomLevel>1 ? zoomLevel-=0.1 : zoomLevel=1;
+
+    applyZoom(zm);
+  }
+
+  function applyZoom(zoom){
+    let allHeaderCell = document.querySelectorAll(".header-cell");
+    let allCell = document.querySelectorAll(".main-cell");
+    let allNoCell = document.querySelectorAll(".sno-cell");
+
+    let fontsize = zoom > 1 ?`${zoom * 16}px`:`16px`;
+
+    allCell.forEach(element => {
+      element.style.fontSize = fontsize;
+    });
+
+    allNoCell.forEach(element => {
+      element.style.fontSize = fontsize;
+     
+    });
+
+    allHeaderCell.forEach(element => {
+      element.style.fontSize = fontsize;
+     
+    });
+  }
+
 createHeaderCells();
 createSeriesNumberCells();
 buildMainSection();
+
+
